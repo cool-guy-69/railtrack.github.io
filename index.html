@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RailTrack | Premium Indian Railway Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #6366f1;
+            --bg-dark: #02040a;
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg-dark);
+            color: #f8fafc;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4f46e5; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .cinematic-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, rgba(2, 4, 10, 1) 100%);
+        }
+
+        @keyframes train-slide {
+            0% { transform: translateX(-120%); }
+            100% { transform: translateX(120%); }
+        }
+        .animate-train-vande {
+            animation: train-slide 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+        .pulse-soft { animation: pulse-soft 3s ease-in-out infinite; }
+
+        .text-glow {
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Smooth reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: reveal-anim 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes reveal-anim {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile specific fixes */
+        @media (max-width: 640px) {
+            .mobile-padding { padding-left: 1.5rem; padding-right: 1.5rem; }
+            h1 { font-size: 3.5rem !important; line-height: 1 !important; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
+  }
+}
+</script>
+</head>
+<body class="selection:bg-indigo-500 selection:text-white">
+    <div id="root"></div>
+</body>
+</html>

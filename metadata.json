@@ -1,0 +1,7 @@
+{
+  "name": "Copy of railtrack - India's Smartest Train Tracker",
+  "description": "A premium, conversion-focused platform for Indian Railway travelers to track live train status, check PNR, and get AI-powered travel assistance.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
